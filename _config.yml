@@ -2,7 +2,7 @@
 title: Recipe Collection
 description: A collection of recipes optimized for Samsung Food import
 baseurl: "/meals" # Change this to your repository name
-url: "https://yourusername.github.io" # Change to your GitHub Pages URL
+url: "https://ianmoran11.github.io" # Change to your GitHub Pages URL
 
 # Build settings
 markdown: kramdown
