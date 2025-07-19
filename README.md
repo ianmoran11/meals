@@ -30,6 +30,7 @@ A beautiful, searchable recipe collection designed for GitHub Pages and optimize
    python scripts/convert-md-to-html.py
    ```
 
+
 ### Method 2: Direct Jekyll Files
 
 1. Create files directly in `_recipes/` with Jekyll frontmatter
