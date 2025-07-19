@@ -1,0 +1,42 @@
+# Site settings
+title: Recipe Collection
+description: A collection of recipes optimized for Samsung Food import
+baseurl: "/meals" # Change this to your repository name
+url: "https://yourusername.github.io" # Change to your GitHub Pages URL
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+permalink: /:categories/:title/
+
+# Collections
+collections:
+  recipes:
+    output: true
+    permalink: /:collection/:name/
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# Exclude from processing
+exclude:
+  - scripts/
+  - _markdown/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+
+# Default values
+defaults:
+  - scope:
+      path: ""
+      type: "recipes"
+    values:
+      layout: "recipe"

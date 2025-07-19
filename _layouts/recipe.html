@@ -1,0 +1,97 @@
+---
+layout: default
+---
+
+<article class="recipe" itemscope itemtype="http://schema.org/Recipe">
+    <header class="recipe-header">
+        <h1 itemprop="name">{{ page.title }}</h1>
+        {% if page.description %}
+        <p class="recipe-description" itemprop="description">{{ page.description }}</p>
+        {% endif %}
+        
+        <div class="recipe-meta">
+            {% if page.prep_time %}
+            <div class="meta-item">
+                <strong>Prep Time:</strong>
+                <time itemprop="prepTime" datetime="PT{{ page.prep_time | replace: 'min', 'M' | replace: 'hr', 'H' }}">{{ page.prep_time }}</time>
+            </div>
+            {% endif %}
+            
+            {% if page.cook_time %}
+            <div class="meta-item">
+                <strong>Cook Time:</strong>
+                <time itemprop="cookTime" datetime="PT{{ page.cook_time | replace: 'min', 'M' | replace: 'hr', 'H' }}">{{ page.cook_time }}</time>
+            </div>
+            {% endif %}
+            
+            {% if page.servings %}
+            <div class="meta-item">
+                <strong>Servings:</strong>
+                <span itemprop="recipeYield">{{ page.servings }}</span>
+            </div>
+            {% endif %}
+            
+            {% if page.difficulty %}
+            <div class="meta-item">
+                <strong>Difficulty:</strong>
+                <span>{{ page.difficulty }}</span>
+            </div>
+            {% endif %}
+        </div>
+        
+        {% if page.tags %}
+        <div class="recipe-tags">
+            {% for tag in page.tags %}
+            <span class="tag">{{ tag }}</span>
+            {% endfor %}
+        </div>
+        {% endif %}
+    </header>
+    
+    {% if page.image %}
+    <img src="{{ page.image | relative_url }}" alt="{{ page.title }}" class="recipe-image" itemprop="image">
+    {% endif %}
+    
+    <section class="ingredients">
+        <h2>Ingredients</h2>
+        <ul itemprop="recipeIngredient">
+            {% for ingredient in page.ingredients %}
+            <li>{{ ingredient }}</li>
+            {% endfor %}
+        </ul>
+    </section>
+    
+    <section class="instructions">
+        <h2>Instructions</h2>
+        <div itemprop="recipeInstructions">
+            {{ content }}
+        </div>
+    </section>
+    
+    {% if page.notes %}
+    <section class="notes">
+        <h2>Notes</h2>
+        <p>{{ page.notes }}</p>
+    </section>
+    {% endif %}
+    
+    <div class="recipe-actions">
+        <button onclick="window.print()" class="print-btn">🖨️ Print Recipe</button>
+        <button onclick="shareRecipe()" class="share-btn">📤 Share Recipe</button>
+    </div>
+</article>
+
+<script>
+function shareRecipe() {
+    if (navigator.share) {
+        navigator.share({
+            title: '{{ page.title }}',
+            text: 'Check out this recipe: {{ page.title }}',
+            url: window.location.href
+        });
+    } else {
+        navigator.clipboard.writeText(window.location.href);
+        alert('Recipe URL copied to clipboard!');
+    }
+}
+</script>
