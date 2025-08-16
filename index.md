@@ -1,9 +1,14 @@
 ## Recipe List
 - [001 Mediterranean Greek Chicken Low Carb](/meals/recipes/001-mediterranean-greek-chicken-low-carb)
 - [Recipe Name](/meals/recipes/README)
+- [Avocado Toast with Low Carb Bread](/meals/recipes/avocado-toast-low-carb)
 - [Simple Avocado on Toast](/meals/recipes/avocado-toast)
+- [Flat White (Almond Milk)](/meals/recipes/flat-white-almond-milk)
+- [Flat White](/meals/recipes/flat-white)
 - [Greek Lemon Herb Roasted Chicken](/meals/recipes/greek-lemon-herb-roasted-chicken)
+- [Simple Greek Salad](/meals/recipes/greek-salad)
 - [Greek-Style Keto Chicken Souvlaki with Tzatziki](/meals/recipes/greek-style-keto-chicken-souvlaki-tzatziki)
+- [Hommus and Carrots](/meals/recipes/hommus-carrots)
 - [Keto Mediterranean Chicken Salad](/meals/recipes/keto-mediterranean-chicken-salad)
 - [Keto Mediterranean Tuna Stuffed Avocados](/meals/recipes/keto-mediterranean-tuna-stuffed-avocados)
 - [Mediterranean Baked Cod with Tomato-Olive Topping](/meals/recipes/mediterranean-baked-cod-tomato-olive-topping)
@@ -14,6 +19,10 @@
 - [Mediterranean Roasted Vegetable Medley](/meals/recipes/mediterranean-roasted-vegetable-medley)
 - [Mediterranean Tandoori Chicken Tray Bake](/meals/recipes/mediterranean-tandoori-chicken-tray-bake)
 - [Mediterranean Zucchini Lasagna](/meals/recipes/mediterranean-zucchini-lasagna)
+- [Picolo Coffee (Almond Milk)](/meals/recipes/picolo-coffee-almond-milk)
+- [Picolo Coffee](/meals/recipes/picolo-coffee)
+- [Tuna Cheese Quesadilla with High Protein Wraps](/meals/recipes/tuna-cheese-quesadilla-high-protein)
+- [Yogurt Berry Protein Smoothie](/meals/recipes/yogurt-berry-protein-smoothie)
 ## Features
 
 - 📱 **Mobile-friendly** responsive design
