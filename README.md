@@ -1,57 +1,96 @@
-## Available Recipes
-Here are the recipes currently available in this collection:
-- [Greek Lemon Herb Roasted Chicken](https://ianmoran11.github.io/meals/recipes/greek-lemon-herb-roasted-chicken/)
-- [Classic Chocolate Chip Cookies](https://ianmoran11.github.io/meals/recipes/sample-chocolate-chip-cookies/)
+# Dewey Decimal-Style Topic Tree
 
-## Adding Recipes
-### Method 1: Using Markdown (Recommended)
-1. Add your recipe as a markdown file in `_markdown/`
-2. Use the provided format (see `_markdown/README.md`)
-3. Run the conversion script:
+This Python implementation creates a hierarchical topic tree using an XML structure inspired by the Dewey Decimal System. Each branch can have up to 26 leaves, represented by letters A-Z.
+
+## Features
+
+- Creates an XML-based hierarchical topic tree
+- Uses OpenRouter API for semantic topic categorization
+- Recursively expands the tree to include specific topics
+- Limits each branch to 26 children (A-Z)
+- Saves the tree structure to an XML file
+
+## Requirements
+
+- Python 3.6+
+- OpenRouter API key
+
+## Installation
+
+1. Install the required packages:
    ```bash
-   python scripts/convert-md-to-html.py
+   pip install -r requirements.txt
    ```
-## Recipe Format
 
-Each recipe should include:
+2. Set your OpenRouter API key as an environment variable:
+   ```bash
+   export OPENROUTER_API_KEY="your-api-key-here"
+   ```
 
-```yaml
----
-title: "Recipe Name"
-description: "Brief description"
-ingredients:
-  - "2 cups flour"
-  - "1 cup sugar"
-servings: 4
-prep_time: "15 min"
-cook_time: "30 min"
-difficulty: "Easy"
-tags: ["dessert", "baking"]
----
+## Usage
+
+### Basic Usage
+
+```python
+import os
+from dewey_tree import build_topic_tree, expand_to_include_topic, save_tree
+
+# Set your API key
+api_key = os.environ.get("OPENROUTER_API_KEY")
+
+# Build initial tree
+tree = build_topic_tree("General Knowledge")
+
+# Expand tree to include a specific topic
+expand_to_include_topic(tree, "Quantum Computing", api_key)
+
+# Save the tree to an XML file
+save_tree(tree, "kt.xml")
 ```
 
-## Samsung Food Import
+### Example Script
 
-To import recipes into Samsung Food:
+Run the example script to see how it works:
+```bash
+python example_usage.py
+```
 
-1. Browse to any recipe on your GitHub Pages site
-2. In Samsung Food, use the import feature
-3. Paste the recipe URL
-4. Samsung Food will automatically parse all details
+This will create a tree with several sample topics and save it to `kt.xml`.
 
-## Customization
+## How It Works
 
-- Edit `_config.yml` to change site settings
-- Modify `assets/css/style.scss` for styling
-- Update layouts in `_layouts/` for different page structures
+1. The system starts with a root topic (default: "General Knowledge")
+2. When expanding to include a new topic:
+   - It finds the most relevant existing node using semantic similarity
+   - Queries OpenRouter for up to 26 subtopics of that node
+   - Adds the subtopics as children (labeled A-Z)
+   - Recursively continues until the target topic is included
+3. Each expansion is limited to 26 children per node
+4. The tree is saved as an XML file with the following structure:
 
-## Contributing
+```xml
+<topic_tree>
+  <topic id="root">General Knowledge</topic>
+    <topic id="A">Science</topic>
+      <topic id="A.A">Physics</topic>
+        <topic id="A.A.A">Quantum Mechanics</topic>
+      </topic>
+    </topic>
+  </topic>
+</topic_tree>
+```
 
-1. Fork the repository
-2. Create a feature branch
-3. Add your recipes
-4. Submit a pull request
+## API Reference
 
-## License
+### `build_topic_tree(root_topic: str = "General Knowledge") -> ET.Element`
+Creates a new topic tree with the specified root topic.
 
-This project is open source and available under the [MIT License](LICENSE).
+### `expand_to_include_topic(tree: ET.Element, target_topic: str, api_key: str, max_depth: int = 10) -> bool`
+Recursively expands the tree until it includes the target topic. Returns `True` on success, `False` on failure.
+
+### `save_tree(tree: ET.Element, filename: str = "kt.xml")`
+Saves the topic tree to an XML file.
+
+## Model Used
+
+This implementation uses the `qwen/qwen3-235b-a22b-thinking-2507` model from OpenRouter for semantic topic categorization.
