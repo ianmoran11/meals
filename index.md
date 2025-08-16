@@ -1,29 +1,19 @@
 ## Recipe List
-- [001 Mediterranean Greek Chicken Low Carb](/_markdown/001-mediterranean-greek-chicken-low-carb.md)
-- [Recipe Name](/_markdown/README.md)
-- [Simple Avocado on Toast](/_markdown/avocado-toast.md)
-- [Greek Lemon Herb Roasted Chicken](/_markdown/greek-lemon-herb-roasted-chicken.md)
-- [Greek-Style Keto Chicken Souvlaki with Tzatziki](/_markdown/greek-style-keto-chicken-souvlaki-tzatziki.md)
-- [Keto Mediterranean Chicken Salad](/_markdown/keto-mediterranean-chicken-salad.md)
-- [Keto Mediterranean Tuna Stuffed Avocados](/_markdown/keto-mediterranean-tuna-stuffed-avocados.md)
-- [Mediterranean Baked Cod with Tomato-Olive Topping](/_markdown/mediterranean-baked-cod-tomato-olive-topping.md)
-- [Mediterranean Cauliflower Rice Bowl with Grilled Shrimp](/_markdown/mediterranean-cauliflower-rice-bowl-grilled-shrimp.md)
-- [Mediterranean Herb-Crusted Salmon with Roasted Vegetables](/_markdown/mediterranean-herb-crusted-salmon-roasted-vegetables.md)
-- [Mediterranean Keto Stuffed Eggplant](/_markdown/mediterranean-keto-stuffed-eggplant.md)
-- [Mediterranean Keto Zucchini Fritters](/_markdown/mediterranean-keto-zucchini-fritters.md)
-- [Mediterranean Roasted Vegetable Medley](/_markdown/mediterranean-roasted-vegetable-medley.md)
-- [Mediterranean Tandoori Chicken Tray Bake](/_markdown/mediterranean-tandoori-chicken-tray-bake.md)
-- [Mediterranean Zucchini Lasagna](/_markdown/mediterranean-zucchini-lasagna.md)
-
----
-layout: default
-title: Recipe Collection - GitHub Pages
----
-
-# Recipe Collection - GitHub Pages
-
-A beautiful, searchable recipe collection designed for GitHub Pages and optimized for Samsung Food import.
-
+- [001 Mediterranean Greek Chicken Low Carb](/meals/recipes/001-mediterranean-greek-chicken-low-carb)
+- [Recipe Name](/meals/recipes/README)
+- [Simple Avocado on Toast](/meals/recipes/avocado-toast)
+- [Greek Lemon Herb Roasted Chicken](/meals/recipes/greek-lemon-herb-roasted-chicken)
+- [Greek-Style Keto Chicken Souvlaki with Tzatziki](/meals/recipes/greek-style-keto-chicken-souvlaki-tzatziki)
+- [Keto Mediterranean Chicken Salad](/meals/recipes/keto-mediterranean-chicken-salad)
+- [Keto Mediterranean Tuna Stuffed Avocados](/meals/recipes/keto-mediterranean-tuna-stuffed-avocados)
+- [Mediterranean Baked Cod with Tomato-Olive Topping](/meals/recipes/mediterranean-baked-cod-tomato-olive-topping)
+- [Mediterranean Cauliflower Rice Bowl with Grilled Shrimp](/meals/recipes/mediterranean-cauliflower-rice-bowl-grilled-shrimp)
+- [Mediterranean Herb-Crusted Salmon with Roasted Vegetables](/meals/recipes/mediterranean-herb-crusted-salmon-roasted-vegetables)
+- [Mediterranean Keto Stuffed Eggplant](/meals/recipes/mediterranean-keto-stuffed-eggplant)
+- [Mediterranean Keto Zucchini Fritters](/meals/recipes/mediterranean-keto-zucchini-fritters)
+- [Mediterranean Roasted Vegetable Medley](/meals/recipes/mediterranean-roasted-vegetable-medley)
+- [Mediterranean Tandoori Chicken Tray Bake](/meals/recipes/mediterranean-tandoori-chicken-tray-bake)
+- [Mediterranean Zucchini Lasagna](/meals/recipes/mediterranean-zucchini-lasagna)
 ## Features
 
 - 📱 **Mobile-friendly** responsive design

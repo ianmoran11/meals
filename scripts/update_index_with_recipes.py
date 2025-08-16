@@ -30,12 +30,15 @@ def generate_recipe_links(markdown_dir):
             title = extract_title_from_md(file_path)
             if title:
                 # Create a user-friendly link
-                link = f"- [{title}](/{markdown_dir}/{filename})"
+                # New format: /meals/recipes/filename (without .md)
+                link_filename = filename.replace(".md", "")
+                link = f"- [{title}](/meals/recipes/{link_filename})"
                 recipe_links.append(link)
             else:
                 # Fallback to filename if title not found
                 fallback_title = filename.replace(".md", "").replace("-", " ").title()
-                link = f"- [{fallback_title}](/{markdown_dir}/{filename})"
+                link_filename = filename.replace(".md", "")
+                link = f"- [{fallback_title}](/meals/recipes/{link_filename})"
                 recipe_links.append(link)
                 print(f"Warning: Could not extract title from {file_path}, using fallback.")
     return "\n".join(recipe_links)
